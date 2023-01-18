@@ -9,13 +9,14 @@
  */
 
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { SafeAreaView, StyleSheet, ActivityIndicator } from 'react-native';
 
 const App = () => {
   return (
-    <View style={styles.container}>
-
-    </View>
+    <SafeAreaView style={styles.container}>
+      <ActivityIndicator size="small" color="orange" />
+      <ActivityIndicator size="large" color="#0055AA" />
+    </SafeAreaView>
   );
 };
 
