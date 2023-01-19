@@ -9,11 +9,20 @@
  */
 
 import React from 'react';
-import { SafeAreaView, StyleSheet, ActivityIndicator } from 'react-native';
+import { SafeAreaView, StyleSheet, ActivityIndicator, View } from 'react-native';
+import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 
 const App = () => {
   return (
     <SafeAreaView style={styles.container}>
+      <View style={{ alignItems: 'center', marginTop: 20 }}>
+        <SkeletonPlaceholder backgroundColor={'orange'}>
+          <View style={{ alignItems: 'center' }}>
+            <View style={{ width: 50, height: 50 }} />
+            <View style={{ width: 120, height: 40, marginTop: 10 }} />
+          </View>
+        </SkeletonPlaceholder>
+      </View>
       <ActivityIndicator size="small" color="orange" />
       <ActivityIndicator size="large" color="#0055AA" />
     </SafeAreaView>
